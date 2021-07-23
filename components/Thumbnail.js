@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { forwardRef } from 'react';
+import { forwardRef } from 'react/index';
 import { ThumbUpIcon } from '@heroicons/react/outline';
 
 const Thumbnail = forwardRef(({ result }, ref ) => {
@@ -13,6 +13,7 @@ const Thumbnail = forwardRef(({ result }, ref ) => {
         `${BASE_URL}${result.poster_path}`}
         height={1080}
         width={1920}
+        alt="movie background"
       />
       <div className="p-2">
         <p className="truncate max-w-md">{result.overview}</p>
